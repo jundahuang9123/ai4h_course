@@ -1,0 +1,522 @@
+@prefix base:     <http://fairbydesign.nl/ontology> .
+@prefix bibo:     <http://purl.org/ontology/bibo/> .
+@prefix dc:       <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix empusa:   <http://empusa.org/0.1/> .
+@prefix fair:     <http://fairbydesign.nl/ontology/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix gbol:     <http://gbol.life/0.1/> .
+@prefix jerm:     <http://jermontology.org/ontology/JERMOntology#> .
+@prefix mixs:     <https://w3id.org/gensc.org/terms/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix ppeo:     <http://purl.org/ppeo/PPEO.owl#> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sample:   <http://fairbydesign.nl/sample/> .
+@prefix schema:   <http://schema.org/> .
+@prefix sschema:  <https://schema.org/> .
+@prefix uniprot:  <http://purl.uniprot.org/core/> .
+@prefix unlock:   <http://m-unlock.nl/ontology/> .
+@prefix void:     <http://m-unlock.nl/ontology/> .
+@prefix wd:       <http://www.wikidata.org/wiki/> .
+@prefix wdt:      <http://www.wikidata.org/wiki/Property:> .
+@prefix wv:       <http://vocab.org/waiver/terms/norms> .
+@prefix xml:      <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+fair:inv_X-omics_iPSC_neurons
+        rdf:type            jerm:Investigation ;
+        jerm:hasPart        <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental> ;
+        schema:contributor  <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/9c404e349c5ae5489cb3439d04d1a8ca> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/2772acb79d8028443f8d2437d9b7b1fa> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/8c732a3458c737efe44c2aceba4b9dc9> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/0f1e4dd0044d2fa804a741fafb72b396> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/94b9848ebc0e526c070022241cf7df74> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/0a1c47141f0939c38b33f65825d2e458> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/8a16b28176a1302c62c41c7c19e919c1> ;
+        schema:description  "We will make a selection of available iPSC lines from healthy controls and three rare, genetic neurodevelopmental/neurometabolic/neuromuscular disorders: CHD2 (epileptic encaphalopathy, intellectual disability), NANS (N-acetylneuraminic acid phosphate synthase deficiency) and DM1 (myotonic dystrophy type 1). These disorders have been selected because:\n\n-they are disorders with shared neurological symptoms and a clear unmet medical need (no approved therapy available, but several therapies in development plus drug screens planned) that are extensively studied (preclinical and clinical research) within our center\n\n-we generated prior evidence for the existence of disease biomarkers at different omics levels\n\n-we generated prior evidence for functional defects in neurons (microelectrode arrays)\n\n-for each disorder there are >3 patient lines available, and for many multiple clones per line have been frozen down\n\n-they show a considerable degree of patient-to-patient variability. This is partly but not exclusively explained by genetic differences (SNP [CHD2] or repeat instability [DM1])" ;
+        schema:identifier   "X-omics_iPSC_neurons" , 123456 ;
+        schema:title        "Multi-omics profiling of iPSC-derived neurons" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/9c404e349c5ae5489cb3439d04d1a8ca>
+        rdf:type           schema:Person ;
+        base:orcid         <https://orcid.org/0000-0003-4450-3112> ;
+        schema:department  "MBS" ;
+        schema:email       <mailto:Peter-bram.thoen@radboudumc.nl> ;
+        schema:familyName  "'t Hoen" ;
+        schema:givenName   "Peter-Bram 't Hoen" ;
+        schema:memberOf    <http://m-unlock.nl/ontology/organization/Radboudumc> .
+
+<http://m-unlock.nl/ontology/organization/Radboudumc>
+        rdf:type          schema:Organization ;
+        schema:legalName  "Radboudumc" .
+
+schema:identifier  rdf:type   rdf:Property ;
+        rdfs:label            "investigation identifier" ;
+        schema:valuePattern   "^[a-zA-Z0-9-_]*${5,25}" ;
+        schema:valueRequired  true .
+
+schema:title  rdf:type        rdf:Property ;
+        rdfs:label            "investigation title" ;
+        schema:valuePattern   ".{10,}" ;
+        schema:valueRequired  true .
+
+schema:description  rdf:type  rdf:Property ;
+        rdfs:label            "investigation description" ;
+        schema:valuePattern   ".{50,}" ;
+        schema:valueRequired  true .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/2772acb79d8028443f8d2437d9b7b1fa>
+        rdf:type           schema:Person ;
+        base:orcid         <https://orcid.org/0000-0002-7448-9289> ;
+        schema:department  "Human Genetics" ;
+        schema:email       <mailto:Nael.nadifkasri@radboudumc.nl> ;
+        schema:familyName  "Nadif Kasri" ;
+        schema:givenName   "Nael Nadif Kasri" ;
+        schema:memberOf    <http://m-unlock.nl/ontology/organization/Radboudumc> .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/8c732a3458c737efe44c2aceba4b9dc9>
+        rdf:type           schema:Person ;
+        base:orcid         <https://orcid.org/0000-0001-7770-8398> ;
+        schema:department  "Human Genetics / Neurology" ;
+        schema:email       <mailto:Dirk.lefeber@radboudumc.nl> ;
+        schema:familyName  "Lefeber" ;
+        schema:givenName   "Dirk Lefeber" ;
+        schema:memberOf    <http://m-unlock.nl/ontology/organization/Radboudumc> .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/0f1e4dd0044d2fa804a741fafb72b396>
+        rdf:type           schema:Person ;
+        base:orcid         <https://orcid.org/0000-0003-1684-1894> ;
+        schema:department  "Center of Proteomics and Metabolomics" ;
+        schema:email       <mailto:M.a.giera@lumc.nl> ;
+        schema:familyName  "Martin" ;
+        schema:givenName   "Giera Martin" ;
+        schema:memberOf    <http://m-unlock.nl/ontology/organization/Leiden_UMC> .
+
+<http://m-unlock.nl/ontology/organization/Leiden_UMC>
+        rdf:type          schema:Organization ;
+        schema:legalName  "Leiden UMC" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/94b9848ebc0e526c070022241cf7df74>
+        rdf:type           schema:Person ;
+        base:orcid         <https://orcid.org/0000-0003-0311-6482> ;
+        schema:department  "Neurology" ;
+        schema:email       <mailto:rachel.mijdam@radboudumc.nl> ;
+        schema:familyName  "Mijdam" ;
+        schema:givenName   "Rachel Mijdam" ;
+        schema:memberOf    <http://m-unlock.nl/ontology/organization/Radboudumc> .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/0a1c47141f0939c38b33f65825d2e458>
+        rdf:type           schema:Person ;
+        base:orcid         <https://orcid.org/0000-0003-1420-9027> ;
+        schema:department  "Human Genetics" ;
+        schema:email       <mailto:Lisa.rahm@radboudumc.nl> ;
+        schema:familyName  "Rahm" ;
+        schema:givenName   "Lisa Rahm" ;
+        schema:memberOf    <http://m-unlock.nl/ontology/organization/Radboudumc> .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/person/8a16b28176a1302c62c41c7c19e919c1>
+        rdf:type           schema:Person ;
+        base:orcid         <https://orcid.org/0000-0002-9405-4960> ;
+        schema:department  "Human Genetics" ;
+        schema:email       <mailto:elly.lewerissa@radboudumc.nl> ;
+        schema:familyName  "Lewerissa" ;
+        schema:givenName   "Elly Lewerissa" ;
+        schema:memberOf    <http://m-unlock.nl/ontology/organization/Radboudumc> .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental>
+        rdf:type            jerm:Study ;
+        jerm:hasPart        <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_WTC> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_1> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_2> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_3> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_1> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_2> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_3> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2_2> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2_3> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_409B> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_Sendai> ;
+        schema:description  "Multi-omics analysis for rare neurodevelopmental disorders. The material consists of patient-derived IPSCs from NANS, CDH2, and DM1 patients. In some cases the genotype was rescued using CRISPR/Cas9 gene editing. The studied omics include Genomics, Transcriptomics, DNA methylation, Proteomics, Glycoproteomics, Metabolomics, and Lipidomics." ;
+        schema:identifier   "Neurodevelopmental" ;
+        schema:title        "Neurodevelopmental_multi-omics" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_WTC>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "male" ;
+        fair:date_of_birth          "unknown" ;
+        fair:gender                 "M" ;
+        fair:genotype               "cdh2" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/605201" ;
+        fair:patient_id             1 ;
+        fair:phenotype              "severe myotonic dystrophy type 1" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160900" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_WTC/sam_WTC> ;
+        schema:description          "Control 1 (WTC) Control 1 (WTC) Control 1 (WTC)" ;
+        schema:identifier           "CTRL_WTC" ;
+        schema:name                 "Control one" .
+
+schema:name  rdf:type         rdf:Property ;
+        rdfs:label            "observation unit name" ;
+        schema:valuePattern   ".{10,}" ;
+        schema:valueRequired  true .
+
+fair:patient_id  rdf:type    rdf:Property ;
+        rdfs:label           "patient_id" ;
+        schema:valuePattern  ".+" .
+
+fair:cytogenetic_karyotype
+        rdf:type             rdf:Property ;
+        rdfs:label           "cytogenetic karyotype" ;
+        schema:valuePattern  ".+" .
+
+fair:date_of_birth  rdf:type  rdf:Property ;
+        rdfs:label           "date of birth" ;
+        schema:valuePattern  ".+" .
+
+fair:genotype  rdf:type      rdf:Property ;
+        rdfs:label           "genotype" ;
+        schema:valuePattern  ".+" .
+
+fair:genotype_identifier
+        rdf:type             rdf:Property ;
+        rdfs:label           "genotype identifier" ;
+        schema:valuePattern  ".+" .
+
+fair:phenotype  rdf:type     rdf:Property ;
+        rdfs:label           "phenotype" ;
+        schema:valuePattern  ".+" .
+
+fair:phenotype_identifier
+        rdf:type             rdf:Property ;
+        rdfs:label           "phenotype identifier" ;
+        schema:valuePattern  ".+" .
+
+fair:gender  rdf:type        rdf:Property ;
+        rdfs:label           "gender" ;
+        schema:valuePattern  ".+" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_1>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "male" ;
+        fair:date_of_birth          "2011-12-21"^^xsd:date ;
+        fair:gender                 "M" ;
+        fair:genotype               "cdh3" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/605202" ;
+        fair:patient_id             2 ;
+        fair:phenotype              "severe myotonic dystrophy type 2" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160901" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_1/sam_IPS20-00122> ;
+        schema:description          "N-acetylneuraminic acid phosphate synthase deficiency patient 1" ;
+        schema:identifier           "NANS_1" ;
+        schema:name                 "NANS patient 1" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_2>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "1986-10-07"^^xsd:date ;
+        fair:gender                 "F" ;
+        fair:genotype               "cdh4" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/605202" ;
+        fair:patient_id             3 ;
+        fair:phenotype              "severe myotonic dystrophy type 3" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160902" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_2/sam_IPS20-00123> ;
+        schema:description          "N-acetylneuraminic acid phosphate synthase deficiency patient 2" ;
+        schema:identifier           "NANS_2" ;
+        schema:name                 "NANS patient 2" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_3>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "1985-09-23"^^xsd:date ;
+        fair:gender                 "F" ;
+        fair:genotype               "cdh5" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/605202" ;
+        fair:patient_id             4 ;
+        fair:phenotype              "severe myotonic dystrophy type 4" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160903" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_3/sam_IPS20-00124> ;
+        schema:description          "N-acetylneuraminic acid phosphate synthase deficiency patient 3" ;
+        schema:identifier           "NANS_3" ;
+        schema:name                 "NANS patient 3" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_1>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "male" ;
+        fair:date_of_birth          "1953-02-12"^^xsd:date ;
+        fair:gender                 "M" ;
+        fair:genotype               "cdh6" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/160900" ;
+        fair:patient_id             5 ;
+        fair:phenotype              "severe myotonic dystrophy type 5" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160904" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_1/sam_IPS20-00036> ;
+        schema:description          "Myotonic dystrophy type 1 patient 1" ;
+        schema:identifier           "DM_1" ;
+        schema:name                 "DM1 patient 1" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_2>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "1982-04-25"^^xsd:date ;
+        fair:gender                 "F" ;
+        fair:genotype               "cdh7" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/160900" ;
+        fair:patient_id             6 ;
+        fair:phenotype              "severe myotonic dystrophy type 6" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160905" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS20-00035> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00089> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00088> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00090> ;
+        schema:description          "Myotonic dystrophy type 1 patient 2" ;
+        schema:identifier           "DM_2" ;
+        schema:name                 "DM1 patient 2" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_3>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "1975-06-29"^^xsd:date ;
+        fair:gender                 "F" ;
+        fair:genotype               "cdh8" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/160900" ;
+        fair:patient_id             7 ;
+        fair:phenotype              "severe myotonic dystrophy type 7" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160906" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_3/sam_IPS22-00151> ;
+        schema:description          "Myotonic dystrophy type 1 patient 3" ;
+        schema:identifier           "DM_3" ;
+        schema:name                 "DM1 patient 3" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2_2>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "male" ;
+        fair:date_of_birth          "2006-01-01"^^xsd:date ;
+        fair:gender                 "M" ;
+        fair:genotype               "cdh9" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/602119" ;
+        fair:patient_id             8 ;
+        fair:phenotype              "severe myotonic dystrophy type 8" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160907" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2_2/sam_IPS22-00057> ;
+        schema:description          "CHD2 epileptic encaphalopathy, intellectual disability patient 2" ;
+        schema:identifier           "CHD2_2" ;
+        schema:name                 "CHD2 patient 2" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2_3>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "2006-01-01"^^xsd:date ;
+        fair:gender                 "F" ;
+        fair:genotype               "cdh10" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/602119" ;
+        fair:patient_id             9 ;
+        fair:phenotype              "severe myotonic dystrophy type 9" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160908" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2_3/sam_IPS23-00025> , <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2_3/sam_IPS22-00063> ;
+        schema:description          "CHD2 epileptic encaphalopathy, intellectual disability patient 3" ;
+        schema:identifier           "CHD2_3" ;
+        schema:name                 "CHD2 patient 3" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "male" ;
+        fair:date_of_birth          "unknown" ;
+        fair:gender                 "M" ;
+        fair:genotype               "cdh11" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/602120" ;
+        fair:patient_id             10 ;
+        fair:phenotype              "severe myotonic dystrophy type 10" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160909" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2/sam_IPS20-00134> ;
+        schema:description          "CDH2 het in WTC control CDH2 het in WTC control" ;
+        schema:identifier           "CHD2" ;
+        schema:name                 "CDH2 het in WTC control" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_409B>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "unknown" ;
+        fair:gender                 "F" ;
+        fair:genotype               "cdh12" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/602121" ;
+        fair:patient_id             11 ;
+        fair:phenotype              "severe myotonic dystrophy type 11" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160910" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_409B/sam_409B> ;
+        schema:description          "Control 2 (409B) Control 2 (409B) Control 2 (409B)" ;
+        schema:identifier           "CTRL_409B" ;
+        schema:name                 "Control two" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_Sendai>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "unknown" ;
+        fair:gender                 "F" ;
+        fair:genotype               "cdh13" ;
+        fair:genotype_identifier    "https://www.omim.org/entry/602122" ;
+        fair:patient_id             12 ;
+        fair:phenotype              "severe myotonic dystrophy type 12" ;
+        fair:phenotype_identifier   "https://www.omim.org/entry/160911" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_Sendai/sam_Sendai> ;
+        schema:description          "Control (Sendai) Control (Sendai) Control (Sendai)" ;
+        schema:identifier           "CTRL_Sendai" ;
+        schema:name                 "Control three" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_WTC/sam_WTC>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "Control one Control one Control one" ;
+        schema:identifier     "WTC" ;
+        schema:name           "Control 1 (WTC)" .
+
+uniprot:organism  rdf:type    rdf:Property ;
+        rdfs:label            "ncbi taxonomy id" ;
+        schema:valuePattern   "^\\d+\\.?0?(?:;\\d+\\.?0?)*$" ;
+        schema:valueRequired  true .
+
+gbol:scientificName  rdf:type  rdf:Property ;
+        rdfs:label            "scientific name" ;
+        schema:valuePattern   ".+" ;
+        schema:valueRequired  true .
+
+fair:biosafety_level  rdf:type  rdf:Property ;
+        rdfs:label            "biosafety level" ;
+        schema:valuePattern   "(1|2|3|4|unknown)" ;
+        schema:valueRequired  true .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_1/sam_IPS20-00122>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "NANS patient 1 clone 1 NANS patient 1 clone 1" ;
+        schema:identifier     "IPS20-00122" ;
+        schema:name           "NANS patient 1 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_2/sam_IPS20-00123>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "NANS patient 2 clone 1 NANS patient 2 clone 1" ;
+        schema:identifier     "IPS20-00123" ;
+        schema:name           "NANS patient 2 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_NANS_3/sam_IPS20-00124>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "NANS patient 3 clone 1 NANS patient 3 clone 1" ;
+        schema:identifier     "IPS20-00124" ;
+        schema:name           "NANS patient 3 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_1/sam_IPS20-00036>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 1 clone 1 DM1 patient 1 clone 1" ;
+        schema:identifier     "IPS20-00036" ;
+        schema:name           "DM1 patient 1 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS20-00035>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 2 clone 1 DM1 patient 2 clone 1" ;
+        schema:identifier     "IPS20-00035" ;
+        schema:name           "DM1 patient 2 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00089>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 2 clone 2 DM1 patient 2 clone 2" ;
+        schema:identifier     "IPS23-00089" ;
+        schema:name           "DM1 patient 2 clone 2" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00088>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 2 clone 3 DM1 patient 2 clone 3" ;
+        schema:identifier     "IPS23-00088" ;
+        schema:name           "DM1 patient 2 clone 3" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_3/sam_IPS22-00151>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 3 clone 1 DM1 patient 3 clone 1" ;
+        schema:identifier     "IPS22-00151" ;
+        schema:name           "DM1 patient 3 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00090>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 2 clone 1 repeat excised CRISPR" ;
+        schema:identifier     "IPS23-00090" ;
+        schema:name           "DM1 patient 2 clone 1 repeat excised" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2_2/sam_IPS22-00057>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "CHD2 patient 2 clone 1 CHD2 patient 2 clone 1" ;
+        schema:identifier     "IPS22-00057" ;
+        schema:name           "CHD2 patient 2 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2_3/sam_IPS23-00025>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "CHD2 patient 3 clone1 CHD2 patient 3 clone1" ;
+        schema:identifier     "IPS23-00025" ;
+        schema:name           "CHD2 patient 3 clone1" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2/sam_IPS20-00134>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "CDH2 het in WTC control CDH2 het in WTC control" ;
+        schema:identifier     "IPS20-00134" ;
+        schema:name           "CDH2 het in WTC control" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CHD2_3/sam_IPS22-00063>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "CHD2 patient 3 clone 2 CHD2 patient 3 clone 2" ;
+        schema:identifier     "IPS22-00063" ;
+        schema:name           "CHD2 patient 3 clone 2" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_409B/sam_409B>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "Control two Control two Control two" ;
+        schema:identifier     "409B" ;
+        schema:name           "Control 2(409B)" .
+
+<http://fairbydesign.nl/ontology/inv_X-omics_iPSC_neurons/stu_Neurodevelopmental/obs_CTRL_Sendai/sam_Sendai>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "Control three Control three Control three" ;
+        schema:identifier     "Sendai" ;
+        schema:name           "Control 3 (Sendai)" .
