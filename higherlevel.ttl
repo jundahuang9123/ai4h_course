@@ -1,0 +1,1323 @@
+@prefix base:     <http://fairbydesign.nl/ontology> .
+@prefix bibo:     <http://purl.org/ontology/bibo/> .
+@prefix dc:       <http://purl.org/dc/terms/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix empusa:   <http://empusa.org/0.1/> .
+@prefix fair:     <http://fairbydesign.nl/ontology/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix gbol:     <http://gbol.life/0.1/> .
+@prefix jerm:     <http://jermontology.org/ontology/JERMOntology#> .
+@prefix mixs:     <https://w3id.org/mixs/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix ppeo:     <http://purl.org/ppeo/PPEO.owl#> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sample:   <http://fairbydesign.nl/sample/> .
+@prefix schema:   <http://schema.org/> .
+@prefix sschema:  <https://schema.org/> .
+@prefix uniprot:  <http://purl.uniprot.org/core/> .
+@prefix unlock:   <http://m-unlock.nl/ontology/> .
+@prefix void:     <http://m-unlock.nl/ontology/> .
+@prefix wd:       <http://www.wikidata.org/wiki/> .
+@prefix wdt:      <http://www.wikidata.org/wiki/Property:> .
+@prefix wv:       <http://vocab.org/waiver/terms/norms> .
+@prefix xml:      <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+fair:inv_XomicsiPSCneurons
+        rdf:type            jerm:Investigation ;
+        jerm:hasPart        <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental> ;
+        schema:contributor  <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/person/9c404e349c5ae5489cb3439d04d1a8ca> ;
+        schema:description  "\"We will make a selection of available iPSC lines from healthy controls and three rare, genetic neurodevelopmental/neurometabolic/neuromuscular disorders: CHD2 (epileptic encaphalopathy, intellectual disability), NANS (N-acetylneuraminic acid phosphate synthase deficiency) and DM1 (myotonic dystrophy type 1). These disorders have been selected because:\n\n-they are disorders with shared neurological symptoms and a clear unmet medical need (no approved therapy available, but several therapies in development plus drug screens planned) that are extensively studied (preclinical and clinical research) within our center\n\n-we generated prior evidence for the existence of disease biomarkers at different omics levels\n\n-we generated prior evidence for functional defects in neurons (microelectrode arrays)\n\n-for each disorder there are >3 patient lines available, and for many multiple clones per line have been frozen down\n\n-they show a considerable degree of patient-to-patient variability. This is partly but not exclusively explained by genetic differences (SNP [CHD2] or repeat instability [DM1])\"" ;
+        schema:identifier   "XomicsiPSCneurons" ;
+        schema:title        "Multi-omics profiling of iPSC-derived neurons" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/person/9c404e349c5ae5489cb3439d04d1a8ca>
+        rdf:type           schema:Person ;
+        base:orcid         <https://orcid.org/0000-0003-4450-3112> ;
+        schema:department  "MBS" ;
+        schema:email       <mailto:Peter-bram.thoen@radboudumc.nl> ;
+        schema:familyName  "'t Hoen" ;
+        schema:givenName   "Peter-Bram 't Hoen" ;
+        schema:memberOf    <http://m-unlock.nl/ontology/organization/Radboudumc> .
+
+<http://m-unlock.nl/ontology/organization/Radboudumc>
+        rdf:type          schema:Organization ;
+        schema:legalName  "Radboudumc" .
+
+schema:identifier  rdf:type   rdf:Property ;
+        rdfs:label            "investigation identifier" ;
+        schema:description    "Identifier corresponding to the investigation" ;
+        schema:valuePattern   "^[a-zA-Z0-9-_]*${5,25}" ;
+        schema:valueRequired  true .
+
+schema:description  rdf:type  rdf:Property ;
+        rdfs:label            "investigation description" ;
+        schema:description    "Description of the investigation" ;
+        schema:valuePattern   ".*{50,}" ;
+        schema:valueRequired  true .
+
+schema:title  rdf:type        rdf:Property ;
+        rdfs:label            "investigation title" ;
+        schema:description    "Title describing the investigation" ;
+        schema:valuePattern   ".*{10,}" ;
+        schema:valueRequired  true .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental>
+        rdf:type            jerm:Study ;
+        jerm:hasPart        <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_WTC> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_3> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_3> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2_2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2_3> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_409B> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_Sendai> ;
+        schema:description  "Multi-omics analysis for rare neurodevelopmental disorders. The material consists of patient-derived IPSCs from NANS, CDH2, and DM1 patients. In some cases the genotype was rescued using CRISPR/Cas9 gene editing. The studied omics include Genomics, Transcriptomics, DNA methylation, Proteomics, Glycoproteomics, Metabolomics, and Lipidomics." ;
+        schema:identifier   "Neurodevelopmental" ;
+        schema:title        "Neurodevelopmental_multi-omics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_WTC>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "male" ;
+        fair:date_of_birth          "unknown" ;
+        fair:genotype               "cdh2" ;
+        fair:phenotype              "severe myotonic dystrophy type 1" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_WTC/sam_WTC> ;
+        schema:dataset              <https://www.omim.org/entry/605201> , <https://www.omim.org/entry/160900> ;
+        schema:description          "Control 1 (WTC) Control 1 (WTC) Control 1 (WTC)" ;
+        schema:identifier           "CTRL_WTC" , 1 ;
+        schema:name                 "Control one" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "male" .
+
+schema:name  rdf:type         rdf:Property ;
+        rdfs:label            "observation unit name" ;
+        schema:description    "Name of the entity being observed" ;
+        schema:valuePattern   ".*{10,}" ;
+        schema:valueRequired  true .
+
+fair:cytogenetic_karyotype
+        rdf:type              rdf:Property ;
+        rdfs:label            "cytogenetic karyotype" ;
+        schema:description    "biological sex of the patient" ;
+        schema:valuePattern   "(female|male|not available|other)" ;
+        schema:valueRequired  false .
+
+fair:date_of_birth  rdf:type  rdf:Property ;
+        rdfs:label            "date of birth" ;
+        schema:description    "Date of birth of subject the sample was derived from." ;
+        schema:valuePattern   ".+" ;
+        schema:valueRequired  false .
+
+<https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+        rdf:type              rdf:Property ;
+        rdfs:label            "gender" ;
+        schema:description    "Gender of the patient." ;
+        schema:valuePattern   "(female|hermaphrodite|male|neuter|not applicable|not collected|not provided|other|restricted access)" ;
+        schema:valueRequired  false .
+
+fair:genotype  rdf:type       rdf:Property ;
+        rdfs:label            "genotype" ;
+        schema:description    "name or code for genotype of organism" ;
+        schema:valuePattern   ".*" ;
+        schema:valueRequired  false .
+
+<https://www.omim.org/entry/605201>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/605201> ;
+        schema:description  "genotype identifier" ;
+        schema:identifier   "605201" .
+
+fair:genotype_identifier
+        rdf:type              rdf:Property ;
+        rdfs:label            "genotype identifier" ;
+        schema:description    "identifier for the genotype" ;
+        schema:valuePattern   "^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]" ;
+        schema:valueRequired  false .
+
+fair:phenotype  rdf:type      rdf:Property ;
+        rdfs:label            "phenotype" ;
+        schema:description    "Where possible, please use the Experimental Factor Ontology (EFO) to describe your phenotypes." ;
+        schema:valuePattern   ".*" ;
+        schema:valueRequired  false .
+
+<https://www.omim.org/entry/160900>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160900> ;
+        schema:description  "genotype identifier" , "phenotype identifier" ;
+        schema:identifier   "160900" .
+
+fair:phenotype_identifier
+        rdf:type              rdf:Property ;
+        rdfs:label            "phenotype identifier" ;
+        schema:description    "identifier for the phenotype" ;
+        schema:valuePattern   "^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]" ;
+        schema:valueRequired  false .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_1>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "male" ;
+        fair:date_of_birth          "2011-12-21"^^xsd:date ;
+        fair:genotype               "cdh3" ;
+        fair:phenotype              "severe myotonic dystrophy type 2" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_1/sam_IPS20-00122> ;
+        schema:dataset              <https://www.omim.org/entry/605202> , <https://www.omim.org/entry/160901> ;
+        schema:description          "N-acetylneuraminic acid phosphate synthase deficiency patient 1" ;
+        schema:identifier           "NANS_1" , 2 ;
+        schema:name                 "NANS patient 1" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "male" .
+
+<https://www.omim.org/entry/605202>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/605202> ;
+        schema:description  "genotype identifier" ;
+        schema:identifier   "605202" .
+
+<https://www.omim.org/entry/160901>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160901> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160901" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_2>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "1986-10-07"^^xsd:date ;
+        fair:genotype               "cdh4" ;
+        fair:phenotype              "severe myotonic dystrophy type 3" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_2/sam_IPS20-00123> ;
+        schema:dataset              <https://www.omim.org/entry/605202> , <https://www.omim.org/entry/160902> ;
+        schema:description          "N-acetylneuraminic acid phosphate synthase deficiency patient 2" ;
+        schema:identifier           "NANS_2" , 3 ;
+        schema:name                 "NANS patient 2" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "female" .
+
+<https://www.omim.org/entry/160902>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160902> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160902" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_3>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "1985-09-23"^^xsd:date ;
+        fair:genotype               "cdh5" ;
+        fair:phenotype              "severe myotonic dystrophy type 4" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_3/sam_IPS20-00124> ;
+        schema:dataset              <https://www.omim.org/entry/605202> , <https://www.omim.org/entry/160903> ;
+        schema:description          "N-acetylneuraminic acid phosphate synthase deficiency patient 3" ;
+        schema:identifier           "NANS_3" , 4 ;
+        schema:name                 "NANS patient 3" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "female" .
+
+<https://www.omim.org/entry/160903>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160903> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160903" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_1>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "male" ;
+        fair:date_of_birth          "1953-02-12"^^xsd:date ;
+        fair:genotype               "cdh6" ;
+        fair:phenotype              "severe myotonic dystrophy type 5" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_1/sam_IPS20-00036> ;
+        schema:dataset              <https://www.omim.org/entry/160900> , <https://www.omim.org/entry/160904> ;
+        schema:description          "Myotonic dystrophy type 1 patient 1" ;
+        schema:identifier           "DM_1" , 5 ;
+        schema:name                 "DM1 patient 1" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "male" .
+
+<https://www.omim.org/entry/160904>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160904> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160904" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "1982-04-25"^^xsd:date ;
+        fair:genotype               "cdh7" ;
+        fair:phenotype              "severe myotonic dystrophy type 6" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS20-00035> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00089> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00088> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00090> ;
+        schema:dataset              <https://www.omim.org/entry/160900> , <https://www.omim.org/entry/160905> ;
+        schema:description          "Myotonic dystrophy type 1 patient 2" ;
+        schema:identifier           "DM_2" , 6 ;
+        schema:name                 "DM1 patient 2" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "female" .
+
+<https://www.omim.org/entry/160905>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160905> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160905" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_3>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "1975-06-29"^^xsd:date ;
+        fair:genotype               "cdh8" ;
+        fair:phenotype              "severe myotonic dystrophy type 7" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_3/sam_IPS22-00151> ;
+        schema:dataset              <https://www.omim.org/entry/160900> , <https://www.omim.org/entry/160906> ;
+        schema:description          "Myotonic dystrophy type 1 patient 3" ;
+        schema:identifier           "DM_3" , 7 ;
+        schema:name                 "DM1 patient 3" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "female" .
+
+<https://www.omim.org/entry/160906>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160906> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160906" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2_2>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "male" ;
+        fair:date_of_birth          "2006-01-01"^^xsd:date ;
+        fair:genotype               "cdh9" ;
+        fair:phenotype              "severe myotonic dystrophy type 8" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2_2/sam_IPS22-00057> ;
+        schema:dataset              <https://www.omim.org/entry/602119> , <https://www.omim.org/entry/160907> ;
+        schema:description          "CHD2 epileptic encaphalopathy, intellectual disability patient 2" ;
+        schema:identifier           "CHD2_2" , 8 ;
+        schema:name                 "CHD2 patient 2" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "male" .
+
+<https://www.omim.org/entry/602119>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/602119> ;
+        schema:description  "genotype identifier" ;
+        schema:identifier   "602119" .
+
+<https://www.omim.org/entry/160907>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160907> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160907" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2_3>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "2006-01-01"^^xsd:date ;
+        fair:genotype               "cdh10" ;
+        fair:phenotype              "severe myotonic dystrophy type 9" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2_3/sam_IPS23-00025> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2_3/sam_IPS22-00063> ;
+        schema:dataset              <https://www.omim.org/entry/602119> , <https://www.omim.org/entry/160908> ;
+        schema:description          "CHD2 epileptic encaphalopathy, intellectual disability patient 3" ;
+        schema:identifier           "CHD2_3" , 9 ;
+        schema:name                 "CHD2 patient 3" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "female" .
+
+<https://www.omim.org/entry/160908>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160908> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160908" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "male" ;
+        fair:date_of_birth          "unknown" ;
+        fair:genotype               "cdh11" ;
+        fair:phenotype              "severe myotonic dystrophy type 10" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2/sam_IPS20-00134> ;
+        schema:dataset              <https://www.omim.org/entry/602120> , <https://www.omim.org/entry/160909> ;
+        schema:description          "CDH2 het in WTC control CDH2 het in WTC control" ;
+        schema:identifier           "CHD2" , 10 ;
+        schema:name                 "CDH2 het in WTC control" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "male" .
+
+<https://www.omim.org/entry/602120>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/602120> ;
+        schema:description  "genotype identifier" ;
+        schema:identifier   "602120" .
+
+<https://www.omim.org/entry/160909>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160909> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160909" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_409B>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "unknown" ;
+        fair:genotype               "cdh12" ;
+        fair:phenotype              "severe myotonic dystrophy type 11" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_409B/sam_409B> ;
+        schema:dataset              <https://www.omim.org/entry/602121> , <https://www.omim.org/entry/160910> ;
+        schema:description          "Control 2 (409B) Control 2 (409B) Control 2 (409B)" ;
+        schema:identifier           "CTRL_409B" , 11 ;
+        schema:name                 "Control two" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "female" .
+
+<https://www.omim.org/entry/602121>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/602121> ;
+        schema:description  "genotype identifier" ;
+        schema:identifier   "602121" .
+
+<https://www.omim.org/entry/160910>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160910> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160910" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_Sendai>
+        rdf:type                    ppeo:observation_unit ;
+        fair:cytogenetic_karyotype  "female" ;
+        fair:date_of_birth          "unknown" ;
+        fair:genotype               "cdh13" ;
+        fair:phenotype              "severe myotonic dystrophy type 12" ;
+        jerm:hasPart                <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_Sendai/sam_Sendai> ;
+        schema:dataset              <https://www.omim.org/entry/602122> , <https://www.omim.org/entry/160911> ;
+        schema:description          "Control (Sendai) Control (Sendai) Control (Sendai)" ;
+        schema:identifier           "CTRL_Sendai" , 12 ;
+        schema:name                 "Control three" ;
+        <https://genomicsstandardsconsortium.github.io/mixs/0000811/>
+                "female" .
+
+<https://www.omim.org/entry/602122>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/602122> ;
+        schema:description  "genotype identifier" ;
+        schema:identifier   "602122" .
+
+<https://www.omim.org/entry/160911>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <https://www.omim.org/entry/160911> ;
+        schema:description  "phenotype identifier" ;
+        schema:identifier   "160911" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_WTC/sam_WTC>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        jerm:hasPart          <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_WTC/sam_WTC/asy_WTC_Epigenomics_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_WTC/sam_WTC/asy_WTC_Epigenomics_2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_WTC/sam_WTC/asy_WTC_Epigenomics_3> ;
+        uniprot:organism      9606 ;
+        schema:description    "Control 1" ;
+        schema:identifier     "WTC" ;
+        schema:name           "Control 1 (WTC)" .
+
+uniprot:organism  rdf:type    rdf:Property ;
+        rdfs:label            "ncbi taxonomy id" ;
+        schema:description    "Taxonomic identifier of the sample according to https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi for example use 2582415 for a blank sample or 1510822 for pig metagenome" ;
+        schema:valuePattern   "\\d+" ;
+        schema:valueRequired  true .
+
+gbol:scientificName  rdf:type  rdf:Property ;
+        rdfs:label            "scientific name" ;
+        schema:description    "Name of the organism" ;
+        schema:valuePattern   ".*" ;
+        schema:valueRequired  true .
+
+fair:biosafety_level  rdf:type  rdf:Property ;
+        rdfs:label            "biosafety level" ;
+        schema:description    "Biosafety level of the corresponding sample" ;
+        schema:valuePattern   "(1|2|3|4|unknown)" ;
+        schema:valueRequired  true .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_1/sam_IPS20-00122>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        jerm:hasPart          <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_1/sam_IPS20-00122/asy_NANS_p1c1_Epigenomics_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_1/sam_IPS20-00122/asy_NANS_p1c1_Epigenomics_2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_1/sam_IPS20-00122/asy_NANS_p1c1_Epigenomics_3> ;
+        uniprot:organism      9606 ;
+        schema:description    "NANS patient 1 clone 1" ;
+        schema:identifier     "IPS20-00122" ;
+        schema:name           "NANS patient 1 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_2/sam_IPS20-00123>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        jerm:hasPart          <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_2/sam_IPS20-00123/asy_NANS_p2c1_Epigenomics_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_2/sam_IPS20-00123/asy_NANS_p2c1_Epigenomics_2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_2/sam_IPS20-00123/asy_NANS_p2c1_Epigenomics_3> ;
+        uniprot:organism      9606 ;
+        schema:description    "NANS patient 2 clone 1" ;
+        schema:identifier     "IPS20-00123" ;
+        schema:name           "NANS patient 2 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_3/sam_IPS20-00124>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        jerm:hasPart          <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_3/sam_IPS20-00124/asy_NANS_p3c1_Epigenomics_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_3/sam_IPS20-00124/asy_NANS_p3c1_Epigenomics_2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_3/sam_IPS20-00124/asy_NANS_p3c1_Epigenomics_3> ;
+        uniprot:organism      9606 ;
+        schema:description    "NANS patient 3 clone 1" ;
+        schema:identifier     "IPS20-00124" ;
+        schema:name           "NANS patient 3 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_1/sam_IPS20-00036>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        jerm:hasPart          <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_1/sam_IPS20-00036/asy_DM1_p1c1_Epigenomics_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_1/sam_IPS20-00036/asy_DM1_p1c1_Epigenomics_2> ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 1 clone 1" ;
+        schema:identifier     "IPS20-00036" ;
+        schema:name           "DM1 patient 1 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS20-00035>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        jerm:hasPart          <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS20-00035/asy_DM1_p2c1_Epigenomics_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS20-00035/asy_DM1_p2c1_Epigenomics_2> ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 2 clone 1" ;
+        schema:identifier     "IPS20-00035" ;
+        schema:name           "DM1 patient 2 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00089>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        jerm:hasPart          <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00089/asy_DM1_p2c2_Epigenomics_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00089/asy_DM1_p2c2_Epigenomics_2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00089/asy_DM1_p2c2_Epigenomics_3> ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 2 clone 2" ;
+        schema:identifier     "IPS23-00089" ;
+        schema:name           "DM1 patient 2 clone 2" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00088>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        jerm:hasPart          <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00088/asy_DM1_p2c3_Epigenomics_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00088/asy_DM1_p2c3_Epigenomics_2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00088/asy_DM1_p2c3_Epigenomics_3> ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 2 clone 3" ;
+        schema:identifier     "IPS23-00088" ;
+        schema:name           "DM1 patient 2 clone 3" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_3/sam_IPS22-00151>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        jerm:hasPart          <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_3/sam_IPS22-00151/asy_DM1_p3c1_Epigenomics_1> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_3/sam_IPS22-00151/asy_DM1_p3c1_Epigenomics_2> , <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_3/sam_IPS22-00151/asy_DM1_p3c1_Epigenomics_3> ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 3 clone 1" ;
+        schema:identifier     "IPS22-00151" ;
+        schema:name           "DM1 patient 3 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00090>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        jerm:hasPart          <http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00090/asy_DM1_p2c1rep_Epigenomics_1> ;
+        uniprot:organism      9606 ;
+        schema:description    "DM1 patient 2 clone 1 repeat excised CRISPR" ;
+        schema:identifier     "IPS23-00090" ;
+        schema:name           "DM1 patient 2 clone 1 repeat excised" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2_2/sam_IPS22-00057>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "CHD2 patient 2 clone 1" ;
+        schema:identifier     "IPS22-00057" ;
+        schema:name           "CHD2 patient 2 clone 1" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2_3/sam_IPS23-00025>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "CHD2 patient 3 clone1" ;
+        schema:identifier     "IPS23-00025" ;
+        schema:name           "CHD2 patient 3 clone1" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2/sam_IPS20-00134>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "CDH2 het in WTC control" ;
+        schema:identifier     "IPS20-00134" ;
+        schema:name           "CDH2 het in WTC control" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CHD2_3/sam_IPS22-00063>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "CHD2 patient 3 clone 2" ;
+        schema:identifier     "IPS22-00063" ;
+        schema:name           "CHD2 patient 3 clone 2" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_409B/sam_409B>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "Control 2" ;
+        schema:identifier     "409B" ;
+        schema:name           "Control 2(409B)" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_Sendai/sam_Sendai>
+        rdf:type              jerm:Sample ;
+        fair:biosafety_level  2 ;
+        fair:packageName      "default" ;
+        gbol:scientificName   "Homo sapiens" ;
+        uniprot:organism      9606 ;
+        schema:description    "Control 3" ;
+        schema:identifier     "Sendai" ;
+        schema:name           "Control 3 (Sendai)" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_WTC/sam_WTC/asy_WTC_Epigenomics_1>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       1 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.81"^^xsd:double ;
+        fair:dna_quality_260_280        "1.96"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "1.9565"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-01"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "WTC_Epigenomics_1" ;
+        schema:name                     "Epigenomics" .
+
+fair:protocol  rdf:type       rdf:Property ;
+        rdfs:label            "protocol" ;
+        schema:description    "The protocol used for preparation or isolation (name or url) used to create the assay" ;
+        schema:valuePattern   ".*" ;
+        schema:valueRequired  true .
+
+fair:facility  rdf:type       rdf:Property ;
+        rdfs:label            "facility" ;
+        schema:description    "The facility that was used for generating the data" ;
+        schema:valuePattern   ".*" ;
+        schema:valueRequired  true .
+
+schema:dateCreated  rdf:type  rdf:Property ;
+        rdfs:label            "assay date" ;
+        schema:description    "The date when the data generation took place" ;
+        schema:valuePattern   ".+" ;
+        schema:valueRequired  true .
+
+fair:isolation_protocol
+        rdf:type              rdf:Property ;
+        rdfs:label            "isolation protocol" ;
+        schema:description    "The protocol used for isolation (name or url)" ;
+        schema:valuePattern   ".*" ;
+        schema:valueRequired  true .
+
+fair:biological_replicate
+        rdf:type              rdf:Property ;
+        rdfs:label            "biological replicate" ;
+        schema:description    "The biological replicate number" ;
+        schema:valuePattern   "\\d+" ;
+        schema:valueRequired  true .
+
+fair:technical_replicate
+        rdf:type              rdf:Property ;
+        rdfs:label            "technical replicate" ;
+        schema:description    "The technical replicate number" ;
+        schema:valuePattern   "\\d+" ;
+        schema:valueRequired  true .
+
+fair:sample_concentration
+        rdf:type              rdf:Property ;
+        rdfs:label            "sample concentration" ;
+        schema:description    "sample concentration of the sample prior to measurement" ;
+        schema:valuePattern   "^-?\\d+\\.?\\d*" ;
+        schema:valueRequired  true .
+
+fair:sample_concentration_unit
+        rdf:type              rdf:Property ;
+        rdfs:label            "sample concentration unit" ;
+        schema:description    "Unit of the measured sample concentration" ;
+        schema:valuePattern   ".*{1,3}/.*{1,3}" ;
+        schema:valueRequired  true .
+
+<file://data/input/iPSC_raw/iPSC_QC>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <file://data/input/iPSC_raw/iPSC_QC> ;
+        schema:description  "quality report" ;
+        schema:identifier   "iPSC_QC" .
+
+fair:quality_report  rdf:type  rdf:Property ;
+        rdfs:label            "quality report" ;
+        schema:description    "Location of the QC report" ;
+        schema:valuePattern   "^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]" ;
+        schema:valueRequired  true .
+
+fair:quality_accessment
+        rdf:type              rdf:Property ;
+        rdfs:label            "quality accessment" ;
+        schema:description    "Whether the QC was sufficient to continue sample analysis" ;
+        schema:valuePattern   "true|false|yes|no" ;
+        schema:valueRequired  true .
+
+<file://data/input/iPSC_raw>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <file://data/input/iPSC_raw> ;
+        schema:description  "raw file" ;
+        schema:identifier   "iPSC_raw" .
+
+fair:raw_file  rdf:type       rdf:Property ;
+        rdfs:label            "raw file" ;
+        schema:description    "Location of the raw data file" ;
+        schema:valuePattern   "^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]" ;
+        schema:valueRequired  true .
+
+<file://data/input/iPSC_processed>
+        rdf:type            jerm:Data_sample ;
+        schema:contentUrl   <file://data/input/iPSC_processed> ;
+        schema:description  "processed file" ;
+        schema:identifier   "iPSC_processed" .
+
+fair:processed_file  rdf:type  rdf:Property ;
+        rdfs:label            "processed file" ;
+        schema:description    "Location of the proccesed data file" ;
+        schema:valuePattern   "^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]" ;
+        schema:valueRequired  false .
+
+fair:batch  rdf:type          rdf:Property ;
+        rdfs:label            "batch" ;
+        schema:description    "The batchnumber of the used cells" ;
+        schema:valuePattern   ".*" ;
+        schema:valueRequired  false .
+
+fair:days_of_differentation
+        rdf:type              rdf:Property ;
+        rdfs:label            "days of differentation" ;
+        schema:description    "Number of days the cells where differentiated before the epigenetic analysis" ;
+        schema:valuePattern   "\\d+" ;
+        schema:valueRequired  false .
+
+fair:number_of_wells_used
+        rdf:type              rdf:Property ;
+        rdfs:label            "number of wells used" ;
+        schema:description    "Number of wells harvested to gather material" ;
+        schema:valuePattern   "\\d+" ;
+        schema:valueRequired  false .
+
+fair:average_cell_confluency
+        rdf:type              rdf:Property ;
+        rdfs:label            "average cell confluency" ;
+        schema:description    "Average confluency of the harvested wells" ;
+        schema:valuePattern   "^(\\-|\\+)?(\\d+)(\\.\\d+)?%" ;
+        schema:valueRequired  false .
+
+fair:dna_quality_260_230
+        rdf:type              rdf:Property ;
+        rdfs:label            "dna quality 260/230" ;
+        schema:description    "The 260/230 absorbance ratio" ;
+        schema:valuePattern   "^-?\\d+\\.?\\d*" ;
+        schema:valueRequired  false .
+
+fair:dna_quality_260_280
+        rdf:type              rdf:Property ;
+        rdfs:label            "dna quality 260/280" ;
+        schema:description    "The 260/280 absorbance ratio" ;
+        schema:valuePattern   "^-?\\d+\\.?\\d*" ;
+        schema:valueRequired  false .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_WTC/sam_WTC/asy_WTC_Epigenomics_2>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       2 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.81"^^xsd:double ;
+        fair:dna_quality_260_280        "1.8"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "1.508"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-02"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "WTC_Epigenomics_2" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_CTRL_WTC/sam_WTC/asy_WTC_Epigenomics_3>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       3 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.85"^^xsd:double ;
+        fair:dna_quality_260_280        "1.92"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "3.1005"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-03"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "WTC_Epigenomics_3" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_1/sam_IPS20-00122/asy_NANS_p1c1_Epigenomics_1>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       1 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.72"^^xsd:double ;
+        fair:dna_quality_260_280        "1.9"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "2.8405"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-04"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "NANS_p1c1_Epigenomics_1" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_1/sam_IPS20-00122/asy_NANS_p1c1_Epigenomics_2>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       2 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "0.17"^^xsd:double ;
+        fair:dna_quality_260_280        "1.96"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "3.003"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-05"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "NANS_p1c1_Epigenomics_2" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_1/sam_IPS20-00122/asy_NANS_p1c1_Epigenomics_3>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       3 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.75"^^xsd:double ;
+        fair:dna_quality_260_280        "1.9"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "2.6715"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-06"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "NANS_p1c1_Epigenomics_3" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_2/sam_IPS20-00123/asy_NANS_p2c1_Epigenomics_1>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       1 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.75"^^xsd:double ;
+        fair:dna_quality_260_280        "1.8"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "1.2285"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-07"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "NANS_p2c1_Epigenomics_1" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_2/sam_IPS20-00123/asy_NANS_p2c1_Epigenomics_2>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       2 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.77"^^xsd:double ;
+        fair:dna_quality_260_280        "1.85"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.741"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-08"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "NANS_p2c1_Epigenomics_2" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_2/sam_IPS20-00123/asy_NANS_p2c1_Epigenomics_3>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       3 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.8"^^xsd:double ;
+        fair:dna_quality_260_280        "1.69"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "1.7095"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-09"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "NANS_p2c1_Epigenomics_3" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_3/sam_IPS20-00124/asy_NANS_p3c1_Epigenomics_1>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       1 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.81"^^xsd:double ;
+        fair:dna_quality_260_280        "1.78"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "1.8265"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-10"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "NANS_p3c1_Epigenomics_1" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_3/sam_IPS20-00124/asy_NANS_p3c1_Epigenomics_2>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       2 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.77"^^xsd:double ;
+        fair:dna_quality_260_280        "1.8"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.40365"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-11"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "NANS_p3c1_Epigenomics_2" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_NANS_3/sam_IPS20-00124/asy_NANS_p3c1_Epigenomics_3>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "90%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       3 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.74"^^xsd:double ;
+        fair:dna_quality_260_280        "1.78"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "1.0855"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-12"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "NANS_p3c1_Epigenomics_3" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_1/sam_IPS20-00036/asy_DM1_p1c1_Epigenomics_1>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       1 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.69"^^xsd:double ;
+        fair:dna_quality_260_280        "1.79"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.5746"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-13"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p1c1_Epigenomics_1" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_1/sam_IPS20-00036/asy_DM1_p1c1_Epigenomics_2>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       2 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "0.18"^^xsd:double ;
+        fair:dna_quality_260_280        "1.82"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.3003"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-14"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p1c1_Epigenomics_2" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS20-00035/asy_DM1_p2c1_Epigenomics_1>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       1 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.67"^^xsd:double ;
+        fair:dna_quality_260_280        "1.87"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "1.5405"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-15"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p2c1_Epigenomics_1" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS20-00035/asy_DM1_p2c1_Epigenomics_2>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       2 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.76"^^xsd:double ;
+        fair:dna_quality_260_280        "1.85"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "1.287"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-16"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p2c1_Epigenomics_2" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00089/asy_DM1_p2c2_Epigenomics_1>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       1 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.72"^^xsd:double ;
+        fair:dna_quality_260_280        "1.85"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "1.3325"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-17"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p2c2_Epigenomics_1" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00089/asy_DM1_p2c2_Epigenomics_2>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       2 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.84"^^xsd:double ;
+        fair:dna_quality_260_280        "1.77"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.44785"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-18"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p2c2_Epigenomics_2" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00089/asy_DM1_p2c2_Epigenomics_3>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       3 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "0.18"^^xsd:double ;
+        fair:dna_quality_260_280        "2.01"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.4706"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-19"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p2c2_Epigenomics_3" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00088/asy_DM1_p2c3_Epigenomics_1>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       1 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "0.18"^^xsd:double ;
+        fair:dna_quality_260_280        "1.68"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.9555"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-20"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p2c3_Epigenomics_1" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00088/asy_DM1_p2c3_Epigenomics_2>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       2 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.76"^^xsd:double ;
+        fair:dna_quality_260_280        2 ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.7605"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-21"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p2c3_Epigenomics_2" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00088/asy_DM1_p2c3_Epigenomics_3>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       3 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.66"^^xsd:double ;
+        fair:dna_quality_260_280        "1.83"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "1.1245"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-22"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p2c3_Epigenomics_3" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_3/sam_IPS22-00151/asy_DM1_p3c1_Epigenomics_1>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       1 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.73"^^xsd:double ;
+        fair:dna_quality_260_280        "2.11"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.51285"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-23"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p3c1_Epigenomics_1" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_3/sam_IPS22-00151/asy_DM1_p3c1_Epigenomics_2>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       2 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.87"^^xsd:double ;
+        fair:dna_quality_260_280        "1.75"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.7605"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-24"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p3c1_Epigenomics_2" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_3/sam_IPS22-00151/asy_DM1_p3c1_Epigenomics_3>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       3 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.7"^^xsd:double ;
+        fair:dna_quality_260_280        "1.68"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.702"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-25"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p3c1_Epigenomics_3" ;
+        schema:name                     "Epigenomics" .
+
+<http://fairbydesign.nl/ontology/inv_XomicsiPSCneurons/stu_Neurodevelopmental/obs_DM_2/sam_IPS23-00090/asy_DM1_p2c1rep_Epigenomics_1>
+        rdf:type                        jerm:Assay ;
+        fair:average_cell_confluency    "70%" ;
+        fair:batch                      1 ;
+        fair:biological_replicate       1 ;
+        fair:days_of_differentation     7 ;
+        fair:dna_quality_260_230        "1.87"^^xsd:double ;
+        fair:dna_quality_260_280        "1.77"^^xsd:double ;
+        fair:facility                   "SNP&SEQ Technology Platform, University Uppsala" ;
+        fair:isolation_protocol         "QIAamp DNA Mini Kit" ;
+        fair:number_of_wells_used       1 ;
+        fair:packageName                "epigenomics" ;
+        fair:protocol                   "QIAamp DNA Mini Kit" ;
+        fair:quality_accessment         true ;
+        fair:sample_concentration       "0.54925"^^xsd:double ;
+        fair:sample_concentration_unit  "ng/ul" ;
+        fair:technical_replicate        1 ;
+        schema:dataset                  <file://data/input/iPSC_raw/iPSC_QC> , <file://data/input/iPSC_raw> , <file://data/input/iPSC_processed> ;
+        schema:dateCreated              "2024-02-26"^^xsd:date ;
+        schema:description              "Reduced representation bisulfite sequencing: important for determining epigenetic mechanisms" ;
+        schema:identifier               "DM1_p2c1rep_Epigenomics_1" ;
+        schema:name                     "Epigenomics" .
